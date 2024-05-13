@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Internee/Assignments/Task3/contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/Internee/Assignments/Task3/contact.js"></script>
+    <title>Contact-Us</title>
+</head>
+<body>
+    <div class="left">
+        <img src="/Internee/Assignments/Task3/img/contact.png" alt="">
+    </div>
+    <div class="container">
+    <i class='bx bx-phone-call'>Contact-Us</i>
+    <div class="data">
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <input type="text" name="name" placeholder="Name" id="name">
+            <input type="email" name="email" placeholder="Email" id="email">
+            <textarea name="message" placeholder="Message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <input class="submit" id="submit" type="submit" value="Submit">
+        </form>
+    </div>    
+    </div>
+
+
+ 
+</body>
+</html>

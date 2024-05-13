@@ -1,0 +1,73 @@
+
+
+body{
+    background-image: url();
+    background-size: cover;
+}
+.left{
+    width: 500px;
+    float: left;
+    width: 500px;
+
+}
+.left img{
+    width: 900px;
+    height: 100%;
+}
+.container{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+}
+i{
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+    margin-left: 250px;
+}
+.data{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    line-height: 2;
+    margin: 10px;
+    line-height: 50px;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1; 
+    text-align: center;
+  }
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(200, 205, 216);
+    color: rgb(19, 19, 19);
+}
+#message{
+    width: 94%;
+    background-color: rgb(200, 205, 216);
+    color: rgb(18, 17, 17);
+    border-radius: 10px;
+}
+.submit{
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgb(200, 205, 216);
+    padding: 10px;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+.submit:hover{
+    background-color:rgb(141, 207, 242);
+}
