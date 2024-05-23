@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Internee/Assignments/SecondLast Task/Home.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+    <nav class="nav">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/Wolf logo.jpeg" alt="">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+        <a href="">Login</a>
+        <a href="">Register</a>
+        <a href="">Logout</a>
+    </nav>
+</header>
+    <div class="container">
+    <div class="ImgScroll">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/1.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/2.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/3.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/4.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/5.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/6.jpeg" alt="">
+
+        <img src="/Internee/Assignments/SecondLast Task/IMG/7.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/8.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/9.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/10.jpeg" alt="">
+        <img src="/Internee/Assignments/SecondLast Task/IMG/11.jpeg" alt="">
+    </div>
+    <div class="buttons">
+        <button class="active first btn"></button>
+        <button class="second btn"></button>
+        <button class="third btn"></button>
+        
+       
+    </div>
+</div>
+
+</body>
+
+<script>
+
+const buttonsWrapper = document.querySelector(".buttons");
+const slides = document.querySelector(".ImgScroll");
+const buttons = Array.from(buttonsWrapper.children);
+let currentIndex = 0;
+const slideInterval = 2000; 
+
+function activateSlide(index) {
+  buttons.forEach(item => item.classList.remove("active"));
+  buttons[index].classList.add("active");
+  slides.style.transform = `translateX(-${index * 100}%)`;
+  currentIndex = index;
+}
+
+buttonsWrapper.addEventListener("click", e => {
+  if (e.target.nodeName === "BUTTON") {
+    const index = buttons.indexOf(e.target);
+    activateSlide(index);
+  }
+});
+
+function autoSlide() {
+  let nextIndex = (currentIndex + 1) % buttons.length;
+  activateSlide(nextIndex);
+}
+
+let autoSlideInterval = setInterval(autoSlide, slideInterval);
+
+buttonsWrapper.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+buttonsWrapper.addEventListener("mouseleave", () => autoSlideInterval = setInterval(autoSlide, slideInterval));
+slides.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+slides.addEventListener("mouseleave", () => autoSlideInterval = setInterval(autoSlide, slideInterval));
+
+
+
+
+
+
+
+</script>
+</html>
